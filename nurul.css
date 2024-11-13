@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    animation: bg-animation 8s infinite alternate;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    animation: photo-bounce 2s infinite ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    animation: text-fade 3s ease-in-out;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    animation: text-fade 3s ease-in-out;
+}
+
+/* Existing CSS code */
+
+#next-page-btn {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #4CAF50, #81C784); /* Green gradient */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hover effect */
+#next-page-btn:hover {
+    background: linear-gradient(135deg, #66BB6A, #A5D6A7); /* Lighter gradient on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Focus effect for accessibility */
+#next-page-btn:focus {
+    outline: 3px solid #81C784;
+    transform: translateY(-1px);
+}
+
+
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    animation: photo-bounce 2s infinite ease-in-out;
+}
+
+/* New animation for the last photo */
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Animations */
+@keyframes bg-animation {
+    0% { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+    100% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes photo-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes text-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Intro Text Styling */
+.intro-text {
+    text-align: center;
+    color: #333;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s forwards; /* Fade-in effect */
+}
+
+.intro-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #4A90E2;
+}
+
+.intro-description {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Content with Picture and Final Text */
+.content {
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.final-title, .final-description {
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hide elements by default */
+.hidden {
+    display: none;
+}
